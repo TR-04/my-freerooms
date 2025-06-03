@@ -39,7 +39,7 @@ const Navbar = ({ toggleDarkMode }: NavbarProps) => {
 
           <div className='flex justify-center items-center cursor-pointer hover:opacity-70 duration-300'>
             <img src={isDoorOpen ? logoOpen : logoClose} onClick={ToggleDoor} className='w-12 object-cover'></img>
-            <div onClick={ToggleDoor} className="text-[#ef6c00] text-3xl font-[700]">
+            <div onClick={ToggleDoor} className="text-[#ef6c00] text-3xl font-[700] select-none">
               Freerooms
             </div>
           </div>
