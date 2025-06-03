@@ -1,6 +1,6 @@
 import logoOpen from '../assets/freeRoomsLogo.png';
 import logoClose from '../assets/freeroomsDoorClosed.png';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface NavbarProps {
   toggleDarkMode: () => void;
@@ -8,7 +8,7 @@ interface NavbarProps {
 }
 
 // Same as landing.tsx
-const Navbar = ({ toggleDarkMode, isDark }: NavbarProps) => {
+const Navbar = ({ toggleDarkMode }: NavbarProps) => {
   
   // Get usestate from local storage
   const [isDoorOpen, setIsDoorOpen] = useState(() => {
@@ -17,7 +17,7 @@ const Navbar = ({ toggleDarkMode, isDark }: NavbarProps) => {
     if (saved) {
       return JSON.parse(saved);
     } else {
-      
+
       // Otherwise default to door being open
       return true;
     }
